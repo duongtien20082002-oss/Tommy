@@ -280,7 +280,7 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 18px)}
 .bullets li b{color:var(--text);font-weight:600}
 
 /* markets */
-.grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.grid-4{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
 .market{padding:24px 22px}
 .market .mk-code{
   width:46px;height:34px;border-radius:11px;display:grid;place-items:center;
@@ -387,6 +387,9 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
 /* ============================================================
    7. RESPONSIVE
    ============================================================ */
+@media (max-width:1080px){
+  .grid-4{grid-template-columns:repeat(3,1fr)}
+}
 @media (max-width:1000px){
   .hero-grid{grid-template-columns:1fr;gap:44px}
   .portrait-wrap{order:-1;min-height:auto;padding:8px 0 26px}
@@ -394,7 +397,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
   .about-grid,.contact-grid{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(3,1fr);gap:22px 10px}
   .stat:nth-child(4)::before{display:none}
-  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .grid-4{grid-template-columns:repeat(3,1fr)}
   .nav-links{
     position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;gap:2px;margin:0;
     background:var(--bg-soft);border-bottom:1px solid var(--border);padding:12px 20px 20px;
@@ -411,7 +414,8 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
   .wrap{padding-inline:18px}
   .section{padding:64px 0}
   .hero{padding-top:calc(var(--nav-h) + 34px)}
-  .grid-4,.grid-skills,.industry,.edu{grid-template-columns:1fr}
+  .grid-4{grid-template-columns:repeat(2,1fr)}
+  .grid-skills,.industry,.edu{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .stat:nth-child(3)::before,.stat:nth-child(5)::before{display:none}
   .timeline{padding-left:26px}
@@ -422,6 +426,10 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
   .fc-3{right:2%;bottom:-4%}
   .fc-2{left:-6px}
   .float-card{padding:9px 12px}
+}
+@media (max-width:520px){
+  .grid-4{grid-template-columns:1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition-duration:.001ms!important}
@@ -523,8 +531,8 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
         <div class="v" data-i18n="fc.ua">UA Marketing</div>
       </div>
       <div class="float-card fc-3">
-        <div class="k">4 <span data-i18n="fc.markets">markets</span></div>
-        <div class="v" data-i18n="fc.regions">EU · US · IN · BR</div>
+        <div class="k">5 <span data-i18n="fc.markets">markets</span></div>
+        <div class="v" data-i18n="fc.regions">VN · EU · US · IN · BR</div>
       </div>
     </div>
   </div>
@@ -538,7 +546,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
     <div class="stat"><div class="num" data-count="6" data-prefix="$" data-suffix="K">$6K</div><div class="lbl" data-i18n="stat.daily">Daily ad spend managed</div></div>
     <div class="stat"><div class="num" data-count="1.2" data-decimals="1" data-suffix="<span class='u'>B₫</span>">1.2B₫</div><div class="lbl" data-i18n="stat.revenue">Peak monthly revenue supported</div></div>
     <div class="stat"><div class="num">20–30</div><div class="lbl" data-i18n="stat.creatives">Video creatives per week</div></div>
-    <div class="stat"><div class="num" data-count="4">4</div><div class="lbl" data-i18n="stat.markets">Markets across 3 continents</div></div>
+    <div class="stat"><div class="num" data-count="5">5</div><div class="lbl" data-i18n="stat.markets">Markets across 3 continents</div></div>
   </div>
 </section>
 
@@ -664,11 +672,11 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
   <div class="wrap">
     <div class="section-head reveal">
       <span class="section-tag" data-i18n="mk.tag">Markets</span>
-      <h2 data-i18n="mk.title">International campaign experience</h2>
+      <h2 data-i18n="mk.title">Where I've run campaigns</h2>
       <p data-i18n="mk.sub">Multi-market campaigns with localized creative concepts and market-level performance insights.</p>
       <span class="mk-note">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
-        <span data-i18n="mk.note">Meta Ads for slot-game products · 11/2023 – 05/2025</span>
+        <span data-i18n="mk.note">Slot games (Meta Ads) 2023–2025 · Agriculture (Facebook Ads) 2022–2023</span>
       </span>
     </div>
     <div class="grid-4">
@@ -676,6 +684,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
       <div class="card market reveal" data-delay="2"><div class="mk-code" aria-hidden="true">US</div><h4 data-i18n="mk.us">United States</h4><p data-i18n="mk.us.d">High-volume acquisition with strict CPA / ROAS targets.</p></div>
       <div class="card market reveal" data-delay="3"><div class="mk-code" aria-hidden="true">IN</div><h4 data-i18n="mk.in">India</h4><p data-i18n="mk.in.d">Cost-efficient scaling with localized ad concepts.</p></div>
       <div class="card market reveal" data-delay="4"><div class="mk-code" aria-hidden="true">BR</div><h4 data-i18n="mk.br">Brazil</h4><p data-i18n="mk.br.d">Creative-led testing for a fast-growing mobile market.</p></div>
+      <div class="card market reveal" data-delay="5"><div class="mk-code" aria-hidden="true">VN</div><h4 data-i18n="mk.vn">Vietnam</h4><p data-i18n="mk.vn.d">Facebook Ads for biological crop-protection products, daily budgets up to VND 20M.</p></div>
     </div>
     <div class="industry">
       <div class="card reveal" data-delay="1">
@@ -863,7 +872,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
       "hero.lead":"Over <b>4 years</b> in Performance Marketing and User Acquisition across <b>Gaming</b> and <b>Agriculture</b>, running campaigns in <b>Europe, the United States, India and Brazil</b>. I scale acquisition with structured creative testing, clean tracking and data-driven optimization.",
       "hero.email":"Email me","hero.viewWork":"View my work",
       "hero.loc":"Binh Thanh, Ho Chi Minh City","hero.channels":"Meta · Google · TikTok Ads",
-      "fc.budget":"Monthly ad budget","fc.years":"years","fc.ua":"UA Marketing","fc.markets":"markets","fc.regions":"EU · US · IN · BR",
+      "fc.budget":"Monthly ad budget","fc.years":"years","fc.ua":"UA Marketing","fc.markets":"markets","fc.regions":"VN · EU · US · IN · BR",
       "stat.years":"Years in performance marketing","stat.budget":"Peak monthly ad budget","stat.daily":"Daily ad spend managed",
       "stat.revenue":"Peak monthly revenue supported","stat.creatives":"Video creatives per week","stat.markets":"Markets across 3 continents",
       "about.tag":"Career Objective",
@@ -884,13 +893,14 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
       "j3.role":"Facebook Ads",
       "j3.i1":"VND 20M / day budget","j3.i2":"VND 1.2B peak monthly revenue","j3.i3":"Meta Business Manager setup",
       "j3.bullets":"<li>Planned and executed <b>Facebook Ads campaigns</b> for agricultural and biological crop-protection products.</li><li>Managed daily advertising budgets of up to <b>VND 20 million</b> and supported peak monthly revenue of <b>VND 1.2 billion</b>.</li><li>Optimized <b>CPM, CPC, CPA and ROAS</b> through structured A/B testing of audiences, creatives, offers and landing pages.</li><li>Built and managed <b>Meta Business Manager</b>, ad accounts, tracking setup and landing pages to support campaign operations.</li><li>Produced and coordinated <b>video ads, voice-overs and multi-format creative assets</b> for ongoing testing and scaling.</li><li>Analyzed <b>funnel performance</b> to identify conversion bottlenecks and improve campaign efficiency.</li>",
-      "mk.tag":"Markets","mk.title":"International campaign experience",
+      "mk.tag":"Markets","mk.title":"Where I've run campaigns",
       "mk.sub":"Multi-market campaigns with localized creative concepts and market-level performance insights.",
-      "mk.note":"Meta Ads for slot-game products · 11/2023 – 05/2025",
+      "mk.note":"Slot games (Meta Ads) 2023–2025 · Agriculture (Facebook Ads) 2022–2023",
       "mk.eu":"Europe","mk.eu.d":"Meta Ads for slot-game products, multi-country localization.",
       "mk.us":"United States","mk.us.d":"High-volume acquisition with strict CPA / ROAS targets.",
       "mk.in":"India","mk.in.d":"Cost-efficient scaling with localized ad concepts.",
       "mk.br":"Brazil","mk.br.d":"Creative-led testing for a fast-growing mobile market.",
+      "mk.vn":"Vietnam","mk.vn.d":"Facebook Ads for biological crop-protection products, daily budgets up to VND 20M.",
       "ind.game":"Gaming &amp; Mobile Apps","ind.game.d":"Slot-game products and a pre-launch football live-scores app: CPI, CPA, activation and retention optimization.",
       "ind.agri":"Agriculture &amp; E-commerce","ind.agri.d":"Facebook Ads for biological crop-protection products, including landing pages, tracking setup and funnel analysis.",
       "sk.tag":"Skills","sk.title":"Toolbox","sk.sub":"The stack I use daily to launch, measure and scale acquisition campaigns.",
@@ -915,7 +925,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
       "hero.lead":"Hơn <b>4 năm</b> làm Performance Marketing và User Acquisition trong hai lĩnh vực <b>Gaming</b> và <b>Nông nghiệp</b>, trực tiếp chạy chiến dịch tại <b>châu Âu, Mỹ, Ấn Độ và Brazil</b>. Tôi mở rộng tệp người dùng bằng cách test creative có hệ thống, tracking sạch và tối ưu dựa trên dữ liệu.",
       "hero.email":"Gửi email","hero.viewWork":"Xem kinh nghiệm",
       "hero.loc":"Bình Thạnh, TP. Hồ Chí Minh","hero.channels":"Meta · Google · TikTok Ads",
-      "fc.budget":"Ngân sách quảng cáo / tháng","fc.years":"năm","fc.ua":"UA Marketing","fc.markets":"thị trường","fc.regions":"EU · US · IN · BR",
+      "fc.budget":"Ngân sách quảng cáo / tháng","fc.years":"năm","fc.ua":"UA Marketing","fc.markets":"thị trường","fc.regions":"VN · EU · US · IN · BR",
       "stat.years":"Năm làm performance marketing","stat.budget":"Ngân sách/tháng cao nhất","stat.daily":"Chi tiêu/ngày đã quản lý",
       "stat.revenue":"Doanh thu/tháng cao nhất hỗ trợ","stat.creatives":"Video creative mỗi tuần","stat.markets":"Thị trường trên 3 châu lục",
       "about.tag":"Mục tiêu nghề nghiệp",
@@ -936,13 +946,14 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
       "j3.role":"Facebook Ads",
       "j3.i1":"Ngân sách 20 triệu VND / ngày","j3.i2":"Doanh thu tháng cao nhất 1,2 tỷ VND","j3.i3":"Thiết lập Meta Business Manager",
       "j3.bullets":"<li>Lên kế hoạch và triển khai <b>chiến dịch Facebook Ads</b> cho sản phẩm bảo vệ thực vật sinh học.</li><li>Quản lý ngân sách quảng cáo hằng ngày lên tới <b>20 triệu VND</b> và hỗ trợ doanh thu tháng cao nhất <b>1,2 tỷ VND</b>.</li><li>Tối ưu <b>CPM, CPC, CPA và ROAS</b> bằng A/B testing có cấu trúc trên audience, creative, offer và landing page.</li><li>Xây dựng và quản lý <b>Meta Business Manager</b>, tài khoản quảng cáo, thiết lập tracking và landing page để vận hành campaign.</li><li>Sản xuất và điều phối <b>video ads, voice-over và creative đa định dạng</b> phục vụ test và scale liên tục.</li><li>Phân tích <b>hiệu quả funnel</b> để tìm điểm nghẽn chuyển đổi và cải thiện hiệu suất campaign.</li>",
-      "mk.tag":"Thị trường","mk.title":"Kinh nghiệm chạy chiến dịch quốc tế",
+      "mk.tag":"Thị trường","mk.title":"Những thị trường tôi đã triển khai",
       "mk.sub":"Chiến dịch đa thị trường với concept quảng cáo được localize và insight hiệu quả theo từng khu vực.",
-      "mk.note":"Meta Ads cho sản phẩm slot game · 11/2023 – 05/2025",
+      "mk.note":"Slot game (Meta Ads) 2023–2025 · Nông nghiệp (Facebook Ads) 2022–2023",
       "mk.eu":"Châu Âu","mk.eu.d":"Meta Ads cho sản phẩm slot game, localize nhiều quốc gia.",
       "mk.us":"Hoa Kỳ","mk.us.d":"Acquisition volume lớn với chỉ tiêu CPA / ROAS nghiêm ngặt.",
       "mk.in":"Ấn Độ","mk.in.d":"Scale tối ưu chi phí với concept quảng cáo được localize.",
       "mk.br":"Brazil","mk.br.d":"Test theo hướng creative cho thị trường mobile tăng trưởng nhanh.",
+      "mk.vn":"Việt Nam","mk.vn.d":"Facebook Ads cho sản phẩm bảo vệ thực vật sinh học, ngân sách tới 20 triệu VND/ngày.",
       "ind.game":"Gaming &amp; Mobile App","ind.game.d":"Sản phẩm slot game và app tỷ số bóng đá giai đoạn tiền launch: tối ưu CPI, CPA, activation và retention.",
       "ind.agri":"Nông nghiệp &amp; E-commerce","ind.agri.d":"Facebook Ads cho sản phẩm bảo vệ thực vật sinh học, gồm landing page, thiết lập tracking và phân tích funnel.",
       "sk.tag":"Kỹ năng","sk.title":"Bộ công cụ","sk.sub":"Những công cụ tôi dùng hằng ngày để chạy, đo lường và scale chiến dịch acquisition.",
