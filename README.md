@@ -42,7 +42,7 @@ portfolio/
 - Song ngữ **EN / VI** — bấm nút EN|VI trên thanh menu, lựa chọn được ghi nhớ trong trình duyệt.
 - Chuyển **sáng / tối** bằng nút hình mặt trời, cũng được ghi nhớ.
 - Thanh tiến trình đọc trang, menu dính, highlight mục đang xem, hiệu ứng xuất hiện khi cuộn.
-- Số liệu đếm động (4+ năm, $50K/tháng, $6K/ngày, 1.2B₫...).
+- Số liệu đếm động (4+ năm, $150K/tháng, $6K/ngày, 1.2B₫...).
 - Nút **Copy** cho email và số điện thoại, có thông báo nhỏ xác nhận.
 - Nút tải CV (PDF) ở menu, phần Contact và footer.
 - Responsive: desktop, tablet, mobile (menu thu gọn).
