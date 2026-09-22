@@ -25,6 +25,10 @@ portfolio/
 └─ assets/
    ├─ avatar.png                    # ảnh chân dung (tách từ CV, nền trong suốt)
    ├─ og-image.png                  # ảnh preview khi share link Facebook/LinkedIn
+   ├─ logo-foxscore.png             # logo công ty (thẻ kinh nghiệm)
+   ├─ logo-oneone.png
+   ├─ logo-lg.png
+   ├─ logo-kingazone.png
    └─ Duong_Tien_UA_Marketing_CV.pdf # CV gốc, dùng cho nút "Download CV"
 ```
 
