@@ -37,7 +37,8 @@ portfolio/
 - Thông tin cá nhân: tên, vị trí, email, số điện thoại, địa điểm, ngày sinh.
 - Mục tiêu nghề nghiệp + 5 core strengths.
 - 4 vị trí: Foxscore (05/2026–nay), One One Media (07/2025–05/2026), LG Clinic (11/2024–06/2025), King Azone JSC (04/2024–10/2024) — giữ nguyên toàn bộ bullet.
-- Thị trường: Vietnam, Europe, United States, India, Brazil (Việt Nam từ chiến dịch Facebook Ads nông nghiệp, 4 thị trường còn lại từ chiến dịch Meta Ads cho slot game).
+- Thị trường: Vietnam, Europe, United States, India, Brazil (Việt Nam: Facebook Ads cho nông nghiệp + dịch vụ thẩm mỹ; 4 thị trường còn lại: Meta Ads cho slot game).
+- Lĩnh vực: Gaming, Nông nghiệp, Thẩm mỹ, Thể thao (4 thẻ ngành ở mục Thị trường).
 - Kỹ năng: UA Marketing, Analytics & Tracking, Creative Production, Soft Skills.
 - Học vấn: Greenwich Vietnam, Digital Marketing 2021–2024, tốt nghiệp loại Khá.
 
