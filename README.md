@@ -10,7 +10,7 @@ Mở trực tiếp file `index.html` bằng trình duyệt (double-click). Khôn
 Nếu muốn chạy qua local server:
 
 ```powershell
-cd "C:\Users\tien\Documents\ChatGPT\UA Marketing\portfolio"
+cd "C:\Users\Admin\Documents\Codex\Tommy"
 python -m http.server 8000
 # rồi mở http://localhost:8000
 ```
@@ -64,15 +64,21 @@ Muốn đổi màu chủ đạo: sửa các biến `--accent`, `--bg`, `--sage` 
 
 ## Đưa lên mạng (miễn phí)
 
-**Cách 1 — Netlify Drop (nhanh nhất):** vào https://app.netlify.com/drop, kéo thả nguyên thư mục `portfolio` → có link ngay.
+Site **đã được deploy tự động** lên Vercel:
 
-**Cách 2 — GitHub Pages:**
+- Repo GitHub: `duongtien20082002-oss/Tommy` (nhánh `main`) — đây là bản gốc.
+- Vercel project: `tommy` → **https://tommy-dusky.vercel.app**
+- **Mỗi lần push lên `main`, Vercel tự build và cập nhật** (thường 20–60 giây). Chỉ cần F5 lại trang là thấy nội dung mới.
 
-1. Tạo repository mới, upload nội dung thư mục `portfolio` lên.
-2. Vào Settings → Pages → Source: `Deploy from a branch` → branch `main`, thư mục `/ (root)` → Save.
-3. Link dạng `https://<username>.github.io/<repo>/`.
+Quy trình sửa nội dung:
 
-**Cách 3 — Vercel:** kéo thả thư mục vào https://vercel.com/new.
+1. Sửa `index.html` (hoặc thay ảnh trong `assets/`).
+2. `git add -A`, `git commit -m "..."`, rồi `git push`.
+3. Đợi khoảng 30 giây, mở https://tommy-dusky.vercel.app và F5.
+
+Muốn deploy thủ công ngay (không chờ Git): chạy `vercel --prod` trong thư mục này.
+
+Phương án dự phòng: GitHub Pages (Settings → Pages → branch `main`, thư mục `/ (root)`) hoặc Netlify Drop (https://app.netlify.com/drop).
 
 Sau khi có domain, nên cập nhật lại `og:image` trong `index.html` thành đường dẫn đầy đủ
 (ví dụ `https://domain-cua-ban.com/assets/og-image.png`) để ảnh preview khi share link hiển thị đúng.
