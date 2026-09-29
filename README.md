@@ -69,6 +69,8 @@ Muốn đổi màu chủ đạo: sửa các biến `--accent`, `--bg`, `--sage` 
 
 ## File PDF của CV
 
+> **Quy tắc:** mọi thay đổi nội dung web phải kèm **tạo lại cả 3 PDF** (`node tools/make-cv-pdfs.js`) và commit trong cùng một lượt — để bản PDF tải về luôn khớp với trang web.
+
 Ba file PDF được tạo **từ chính trang web** (in bằng Chrome headless, theme sáng) nên luôn bám sát nội dung web:
 
 | Ngôn ngữ | File | Nút Download CV trỏ tới |
