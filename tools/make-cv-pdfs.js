@@ -64,7 +64,11 @@ const server = http.createServer((req, res) => {
   });
 
   for (const lang of LANGS) {
-    const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 }, deviceScaleFactor: 2 });
+    const ctx = await browser.newContext({
+      viewport: { width: 1280, height: 900 },
+      deviceScaleFactor: 2,
+      reducedMotion: "reduce",
+    });
     await ctx.addInitScript((code) => {
       try {
         localStorage.setItem("dt-lang", code);
@@ -92,6 +96,15 @@ const server = http.createServer((req, res) => {
       printBackground: true,
       margin: { top: "12mm", bottom: "12mm", left: "10mm", right: "10mm" },
     });
+
+    // Chuan hoa ngay tao file (Chrome chen thoi diem chay vao PDF) de moi lan
+    // tao lai tu cung noi dung cho ra file giong het nhau — nho vay co the
+    // kiem tra "PDF da khop voi web chua" bang git status / so sanh hash.
+    const raw = fs.readFileSync(out);
+    const latin = raw.toString("latin1");
+    const fixed = latin.replace(/D:\d{14}\+00'00'/g, "D:20260101000000+00'00'");
+    if (fixed !== latin) fs.writeFileSync(out, Buffer.from(fixed, "latin1"));
+
     const mb = (fs.statSync(out).size / 1024 / 1024).toFixed(2);
     console.log(`${lang}: ${FILES[lang]} (${mb} MB)`);
     await ctx.close();
