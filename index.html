@@ -443,6 +443,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
   .fc-3{right:2%;bottom:-4%}
   .fc-2{left:-6px}
   .float-card{padding:9px 12px}
+  .chip-toggle button{padding:6px 8px;font-size:12px}
 }
 @media (max-width:520px){
   .grid-4{grid-template-columns:1fr}
@@ -490,6 +491,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
       <div class="chip-toggle" role="group" aria-label="Language">
         <button id="lang-en" aria-pressed="true">EN</button>
         <button id="lang-vi" aria-pressed="false">VI</button>
+        <button id="lang-zh" aria-pressed="false">中文</button>
       </div>
       <button class="icon-btn" id="themeBtn" aria-label="Toggle theme" title="Light / Dark">
         <svg id="themeIcon" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M18.8 5.2l-1.4 1.4M6.6 17.4l-1.4 1.4"/></svg>
@@ -1062,6 +1064,67 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
       "ct.send":"Gửi email","ct.cv":"Tải CV (PDF)","ct.email":"Email","ct.phone":"Điện thoại","ct.location":"Địa điểm",
       "ct.location.v":"Bình Thạnh, TP. Hồ Chí Minh","ct.copy":"Sao chép","ct.copied":"Đã sao chép!",
       "foot.role":"Thu hút người dùng · Marketing hiệu suất","foot.cv":"CV (PDF)","foot.top":"Lên đầu trang"
+    },
+    zh: {
+      "skip":"跳到主要内容",
+      "brand.sub":"用户获取",
+      "nav.about":"关于我","nav.experience":"工作经历","nav.markets":"投放市场","nav.skills":"技能","nav.education":"教育背景","nav.contact":"联系方式",
+      "nav.download":"下载简历",
+      "hero.eyebrow":"用户获取 · 效果营销",
+      "hero.role":"UA 营销 — 效果营销与用户获取",
+      "hero.lead":"拥有近 <b>3 年</b>效果营销与用户获取经验，覆盖 <b>游戏</b>、<b>农业</b>、<b>医美</b> 与 <b>体育</b> 行业，并在 <b>欧洲、美国、印度和巴西</b> 投放广告。我通过系统化的素材测试、规范的归因追踪与数据驱动优化来扩大用户规模。",
+      "hero.email":"给我发邮件","hero.viewWork":"查看我的经历",
+      "hero.loc":"胡志明市平盛区","hero.channels":"Meta · Google · TikTok Ads",
+      "fc.budget":"每月广告预算","fc.years":"年","fc.ua":"用户获取","fc.markets":"个市场","fc.regions":"VN · EU · US · IN · BR",
+      "stat.years":"效果营销年限","stat.budget":"单月最高广告预算","stat.daily":"日均管理的广告支出",
+      "stat.revenue":"单月最高支持营收","stat.creatives":"每周视频素材数量","stat.markets":"横跨三大洲的市场",
+      "about.tag":"职业目标",
+      "about.title":"以测试为先的效果营销思维",
+      "about.text":"UA 营销从业者，拥有近 <b>3 年经验</b>，专注于 <b>效果营销</b> 与 <b>用户获取</b>，覆盖游戏、农业、医美与体育行业，并具备欧洲、美国、印度和巴西等国际市场营销经验。我负责用户获取的完整闭环——受众研究、广告结构搭建、素材测试与漏斗优化——以提升 ROAS、降低 CPA 并实现规模化增长。期望在效果营销与用户获取领域继续深耕。",
+      "about.strengths":"<span class=\"strength\"><i></i>用户获取</span><span class=\"strength\"><i></i>素材测试</span><span class=\"strength\"><i></i>ROAS 优化</span><span class=\"strength\"><i></i>CPA 优化</span><span class=\"strength\"><i></i>数据分析</span>",
+      "info.name":"姓名","info.role":"职位","info.role.v":"UA 营销","info.exp":"经验","info.exp.v":"近 3 年",
+      "info.industries":"行业","info.industries.v":"游戏 · 农业 · 医美 · 体育","info.location":"所在地","info.location.v":"胡志明市平盛区",
+      "info.birth":"出生年份","info.birth.v":"2002",
+      "exp.tag":"工作经历","exp.title":"近 3 年一线用户获取实战经验",
+      "exp.sub":"4 个职位、4 个行业——农业、医美诊所、游戏与体育 App——覆盖 5 个市场：越南、欧洲、美国、印度和巴西。",
+      "j1.role":"UA 营销","j1.period":"2026/05 — 至今","j1.note":"（上线前阶段）",
+      "j1.i1":"每月 30,000–50,000 美元","j1.i2":"Meta · Google · TikTok · Apple Search Ads","j1.i3":"AppsFlyer · GA4 归因",
+      "j1.bullets":"<li>在 <b>Meta Ads、Google Ads、TikTok Ads 与 Apple Search Ads</b> 上执行并优化用户获取广告，管理每月 <b>30,000 至 50,000 美元</b>的广告预算。</li><li>与产品及创意团队协作梳理 <b>用户旅程</b>，找出 <b>高效果素材</b>，并放大表现优异的广告。</li><li>搭建并持续迭代 <b>广告结构、受众、出价策略</b> 与素材，在上线前验证各获客渠道。</li><li>跟踪并优化漏斗前端指标，包括 <b>CPI、CPA、CTR、CPM、CVR</b>、激活率、留存率与用户质量。</li><li>与产品和开发团队合作，基于广告投放与应用内行为洞察，改进 <b>新手引导与转化流程</b>。</li><li>使用 <b>AppsFlyer、GA4</b> 与归因数据监控获客表现，为扩量决策提供依据。</li>",
+      "j2.role":"Facebook 广告优化师",
+      "j2.period":"2025/07 — 2026/05",
+      "j2.i1":"每日 6,000 美元投放","j2.i4":"每月 100,000–150,000 美元","j2.i2":"欧洲 · 美国 · 印度 · 巴西","j2.i3":"每周 20–30 条视频素材",
+      "jlg.role":"Facebook 广告优化师",
+      "jlg.i1":"每日 8,000 万越南盾预算","jlg.i2":"每月约 40 亿越南盾营收","jlg.i3":"Facebook Ads – Messages",
+      "jlg.bullets":"<li>为医美服务策划、投放并优化 <b>Facebook Ads – Messages</b> 广告：<b>痘坑治疗、色素沉着、激光脱毛、美白</b> 等。</li><li>管理最高达 <b>每日 8,000 万越南盾</b>的广告预算，并根据各服务与广告的表现跟踪及重新分配预算。</li><li>监控并优化关键指标：<b>CPM、CTR、CPC、单条消息成本、线索数量与线索质量</b>。</li><li>跟踪从 <b>消息 → 咨询 → 预约 → 营收</b> 的全链路效果，支撑约 <b>每月 40 亿越南盾</b>的营收。</li><li>构思并协调 <b>视频广告制作</b>，为每个服务品类打造多个角度与素材。</li><li>对文案、素材与受众进行 <b>A/B 测试</b>，降低单条消息成本并提升线索数量。</li><li>执行 <b>评论区种草</b> 与社交证明，帮助提升主动咨询量。</li><li>每日监控广告表现，<b>放大表现优异的广告组，关停单条消息成本过高或线索质量差的广告组</b>。</li>",
+      "j2.bullets":"<li>为老虎机游戏产品在欧洲、印度、美国和巴西市场管理 <b>Meta Ads 广告</b>。</li><li>管理每日最高 <b>6,000 美元</b>的广告支出，并在多个市场保持效果目标。</li><li>通过受众、出价、版位与素材的迭代，分析并优化 <b>CPA、ROAS、CTR、CPM 与转化率</b>。</li><li>主导素材创意、受众与广告结构层面的 <b>A/B 测试</b>，找出可复制的优胜组合。</li><li>协调每周 <b>20–30 条视频素材</b>的制作，并根据各市场的效果洞察进行广告创意本地化。</li><li>持续优化广告结构与素材策略，提升 <b>用户获取效率</b>并支持规模化扩展。</li>",
+      "j3.role":"Facebook 广告优化师",
+      "j3.i1":"每日 2,000 万越南盾预算","j3.i2":"单月最高营收 12 亿越南盾","j3.i3":"Meta Business Manager 搭建",
+      "j3.bullets":"<li>为生物植物保护产品策划并执行 <b>Facebook Ads 广告</b>。</li><li>管理每日最高 <b>2,000 万越南盾</b>的广告预算，并支撑单月最高 <b>12 亿越南盾</b>的营收。</li><li>通过对受众、素材、优惠与落地页的结构化 A/B 测试，优化 <b>CPM、CPC、CPA 与 ROAS</b>。</li><li>搭建并管理 <b>Meta Business Manager</b>、广告账户、追踪设置与落地页，支撑广告投放运营。</li><li>制作并协调 <b>视频广告、配音与多格式素材</b>，持续用于测试与扩量。</li><li>分析 <b>漏斗表现</b>，找出转化瓶颈并提升广告效率。</li>",
+      "mk.tag":"投放市场","mk.title":"我投放过的市场",
+      "mk.sub":"多市场广告投放，结合本地化创意概念与各市场的效果洞察。",
+      "mk.note":"老虎机游戏（2025–2026）· 农业（2024）· 医美诊所（2024–2025）· 体育 App（2026–至今）",
+      "mk.eu":"欧洲","mk.eu.d":"为老虎机游戏产品投放 Meta Ads，多国本地化。",
+      "mk.us":"美国","mk.us.d":"在严格的 CPA / ROAS 目标下进行大规模获客。",
+      "mk.in":"印度","mk.in.d":"借助本地化广告创意实现低成本扩量。",
+      "mk.br":"巴西","mk.br.d":"针对高速增长的移动市场进行素材驱动的测试。",
+      "mk.vn":"越南","mk.vn.d":"农业与医美服务：Facebook Ads – Messages，预算最高每日 8,000 万越南盾。",
+      "ind.game":"游戏 &amp; 移动应用","ind.game.d":"在欧洲、美国、印度和巴西投放老虎机游戏产品：优化 CPI、CPA 与 ROAS。",
+      "ind.agri":"农业 &amp; 电商","ind.agri.d":"为生物植物保护产品投放 Facebook Ads，包括落地页、追踪搭建与漏斗分析。",
+      "ind.beauty":"医美 &amp; 美容","ind.beauty.d":"为医美服务投放 Facebook Ads – Messages：痘坑治疗、激光脱毛、美白等。",
+      "ind.sport":"体育 App","ind.sport.d":"为足球比分 App 做上线前获客：优化 CPI、CPA、激活率与留存率。",
+      "sk.tag":"技能","sk.title":"技能工具箱","sk.sub":"我每天用来投放、衡量并扩大广告的工具与方法。",
+      "sk.g1":"用户获取","sk.g2":"数据分析 &amp; 追踪","sk.g3":"素材制作","sk.g4":"软技能",
+      "sk.g1.d":"在 Meta、Google 和 TikTok Ads 上投放并优化获客广告。","sk.g2.d":"搭建追踪体系并解读数据，决定哪些广告组该放大、哪些该关停。",
+      "sk.g3.d":"自主制作并协调多格式素材，速度足以支撑持续测试。","sk.g4.d":"跨部门与跨市场协作，同时管理大预算与多个广告项目。",
+      "sk.t.structure":"广告结构搭建","sk.t.audience":"受众研究","sk.t.creative":"素材测试","sk.t.funnel":"漏斗优化",
+      "sk.t.copy":"广告文案撰写","sk.t.brief":"UGC 素材简报","sk.t.team":"跨部门协作","sk.t.time":"时间与截止日期管理","sk.t.problem":"问题解决","sk.t.comm":"沟通与汇报","sk.t.localize":"素材本地化","sk.t.data":"数据驱动决策","sk.t.multi":"多项目并行管理",
+      "ed.tag":"教育背景","ed.title":"学术背景","ed.year":"3 年","ed.major":"数字营销",
+      "ed.b1":"数字营销专业学士学位","ed.b2":"毕业等级：良好（Good）",
+      "ct.tag":"联系方式","ct.title":"聊聊用户获取吧",
+      "ct.blurb":"欢迎就用户获取、效果营销或合作机会与我交流。随时联系我——我通常会很快回复。",
+      "ct.send":"发送邮件","ct.cv":"下载简历（PDF）","ct.email":"邮箱","ct.phone":"电话","ct.location":"所在地",
+      "ct.location.v":"胡志明市平盛区","ct.copy":"复制","ct.copied":"已复制！",
+      "foot.role":"UA 营销 · 效果营销","foot.cv":"简历（PDF）","foot.top":"回到顶部"
     }
   };
 
@@ -1076,22 +1139,26 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
     var dict = I18N[lang] || I18N.en;
     nodes.forEach(function(n){
       var key = n.getAttribute("data-i18n");
-      var val = (lang === "en") ? originals.get(n) : dict[key];
+      var val = (lang === "en") ? originals.get(n) : (dict[key] != null ? dict[key] : I18N.en[key]);
       if (val != null) n.innerHTML = val;
     });
     htmlNodes.forEach(function(n){
       var key = n.getAttribute("data-i18n-html");
-      var val = (lang === "en") ? originalsHtml.get(n) : dict[key];
+      var val = (lang === "en") ? originalsHtml.get(n) : (dict[key] != null ? dict[key] : I18N.en[key]);
       if (val != null) n.innerHTML = val;
     });
     document.documentElement.lang = lang;
     try { localStorage.setItem("dt-lang", lang); } catch(e){}
-    document.getElementById("lang-en").setAttribute("aria-pressed", String(lang === "en"));
-    document.getElementById("lang-vi").setAttribute("aria-pressed", String(lang === "vi"));
+    ["en","vi","zh"].forEach(function(code){
+      var btn = document.getElementById("lang-" + code);
+      if (btn) btn.setAttribute("aria-pressed", String(lang === code));
+    });
   }
 
-  document.getElementById("lang-en").addEventListener("click", function(){ applyLang("en"); });
-  document.getElementById("lang-vi").addEventListener("click", function(){ applyLang("vi"); });
+  ["en","vi","zh"].forEach(function(code){
+    var btn = document.getElementById("lang-" + code);
+    if (btn) btn.addEventListener("click", function(){ applyLang(code); });
+  });
 
   /* ---------- theme ---------- */
   var root = document.documentElement;
@@ -1186,7 +1253,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
   document.querySelectorAll("[data-copy]").forEach(function(btn){
     btn.addEventListener("click", function(){
       var text = btn.getAttribute("data-copy");
-      var lang = document.documentElement.lang === "vi" ? "vi" : "en";
+      var lang = I18N[document.documentElement.lang] ? document.documentElement.lang : "en";
       function done(){ showToast(I18N[lang]["ct.copied"]); }
       if (navigator.clipboard && navigator.clipboard.writeText){
         navigator.clipboard.writeText(text).then(done, done);
