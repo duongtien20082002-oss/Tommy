@@ -22,6 +22,8 @@ portfolio/
 ├─ index.html                       # toàn bộ website
 ├─ README.md                        # file này
 ├─ preview-hero.png                 # ảnh xem trước giao diện
+├─ tools/
+│  └─ make-cv-pdfs.js               # script tạo lại 3 file PDF CV (EN/VI/ZH)
 └─ assets/
    ├─ avatar.png                    # ảnh chân dung (tách từ CV, nền trong suốt)
    ├─ og-image.png                  # ảnh preview khi share link Facebook/LinkedIn
@@ -29,7 +31,10 @@ portfolio/
    ├─ logo-oneone.png
    ├─ logo-lg.png
    ├─ logo-kingazone.png
-   └─ Duong_Tien_UA_Marketing_CV.pdf # CV gốc, dùng cho nút "Download CV"
+   ├─ CV_DuongTien_EN.pdf           # CV tiếng Anh (nút Download CV khi chọn EN)
+   ├─ CV_DuongTien_VI.pdf           # CV tiếng Việt (khi chọn VI)
+   ├─ CV_DuongTien_ZH.pdf           # CV tiếng Trung (khi chọn 中文)
+   └─ Duong_Tien_UA_Marketing_CV.pdf # CV gốc bản thiết kế cũ (không còn dùng trên web)
 ```
 
 ## Nội dung lấy từ CV
@@ -61,6 +66,24 @@ Các phần tử có gắn `data-i18n="khoá"` sẽ tự đổi theo ngôn ngữ
 
 Muốn đổi ảnh: thay `assets/avatar.png` bằng ảnh vuông (tỉ lệ 1:1, nền trong suốt hoặc nền đặc).
 Muốn đổi màu chủ đạo: sửa các biến `--accent`, `--bg`, `--sage` trong khối `:root` ở đầu file.
+
+## File PDF của CV
+
+Ba file PDF được tạo **từ chính trang web** (in bằng Chrome headless, theme sáng) nên luôn bám sát nội dung web:
+
+| Ngôn ngữ | File | Nút Download CV trỏ tới |
+|---|---|---|
+| English | `assets/CV_DuongTien_EN.pdf` | khi chọn **EN** |
+| Tiếng Việt | `assets/CV_DuongTien_VI.pdf` | khi chọn **VI** |
+| 中文 | `assets/CV_DuongTien_ZH.pdf` | khi chọn **中文** |
+
+Sau khi sửa nội dung web, tạo lại cả 3 PDF bằng:
+
+```powershell
+node tools/make-cv-pdfs.js
+```
+
+(Cần Node.js, Google Chrome và gói `playwright-core` — có thể trỏ qua biến môi trường `NODE_PATH`.)
 
 ## Đưa lên mạng (miễn phí)
 
