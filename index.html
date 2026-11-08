@@ -117,17 +117,19 @@ ul{margin:0;padding:0;list-style:none}
   transition:border-color .3s ease, background .3s ease;
 }
 .nav.scrolled{border-bottom-color:var(--border-soft)}
-.nav-inner{display:flex;align-items:center;gap:14px;width:100%;max-width:var(--max);margin-inline:auto;padding-inline:24px}
+.nav-inner{display:flex;align-items:center;gap:12px;width:100%;max-width:calc(var(--max) + 120px);margin-inline:auto;padding-inline:24px}
 .brand{display:flex;align-items:center;gap:11px;white-space:nowrap;flex:none;font-weight:700;font-family:var(--font-display);letter-spacing:-.01em}
-.brand .mono{
-  width:36px;height:36px;border-radius:11px;display:grid;place-items:center;
-  background:linear-gradient(145deg,var(--accent),var(--accent-deep));
-  color:#04170E;font-size:14px;font-weight:800;letter-spacing:.02em;
-  box-shadow:0 8px 22px -12px var(--accent);
-}
-.brand span.sub{display:block;font-size:11px;font-weight:500;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;font-family:var(--font)}
+.brand .mark{position:relative;width:40px;height:40px;flex:none;border-radius:12px;box-shadow:0 10px 26px -12px var(--accent),0 2px 8px -2px rgba(0,0,0,.45);transition:transform .45s cubic-bezier(.2,.8,.3,1.4)}
+.brand .mark img{width:100%;height:100%;display:block;border-radius:12px}
+.brand .mark::after{content:"";position:absolute;inset:0;border-radius:12px;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.45) 50%,transparent 65%);background-size:250% 100%;background-position:120% 0;opacity:0;transition:background-position .8s ease,opacity .3s}
+.brand:hover .mark{transform:rotate(-6deg) translateY(-1px) scale(1.06)}
+.brand:hover .mark::after{opacity:1;background-position:-30% 0}
+.brand-text{display:flex;flex-direction:column;gap:3px;line-height:1.15}
+.brand .name{font-size:16.5px;letter-spacing:-.02em}
+.brand span.sub{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:var(--accent);letter-spacing:.02em;font-family:var(--font)}
+.brand span.sub::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 22%,transparent);flex:none}
 .nav-links{display:flex;gap:4px;margin-left:auto}
-.nav-links a{font-size:14px;color:var(--text-2);padding:8px 9px;border-radius:9px;transition:.2s}
+.nav-links a{font-size:14px;color:var(--text-2);padding:8px 7px;border-radius:9px;transition:.2s}
 .nav-links a:hover{color:var(--text);background:var(--surface)}
 .nav-links a.active{color:var(--accent)}
 .only-mobile{display:none}
@@ -415,7 +417,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
 @media (max-width:1080px){
   .grid-4{grid-template-columns:repeat(3,1fr)}
 }
-@media (max-width:1180px){
+@media (max-width:1300px){
   .nav-links{
     position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;gap:2px;margin:0;
     background:var(--bg-soft);border-bottom:1px solid var(--border);padding:12px 20px 20px;
@@ -462,6 +464,14 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
   .grid-4{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
 }
+@media (max-width:480px){
+  .brand{gap:9px}
+  .brand .mark{width:36px;height:36px}
+  .brand .name{font-size:15.5px}
+}
+@media (max-width:520px){
+  .brand span.sub{display:none}
+}
 @media (prefers-reduced-motion:reduce){
   *{animation:none!important;transition-duration:.001ms!important}
   html{scroll-behavior:auto}
@@ -482,10 +492,10 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
 <header class="nav" id="nav">
   <div class="nav-inner">
     <a class="brand" href="#home" aria-label="Duong Tien — home">
-      <span class="mono">DT</span>
-      <span>
-        Duong Tien
-        <span class="sub" data-i18n="brand.sub">UA Marketing</span>
+      <span class="mark"><img src="favicon.svg" alt="" width="40" height="40" /></span>
+      <span class="brand-text">
+        <span class="name">Duong Tien</span>
+        <span class="sub" data-i18n="brand.sub">UA &amp; Digital Performance</span>
       </span>
     </a>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
@@ -963,7 +973,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
   var I18N = {
     en: {
       "skip":"Skip to content",
-      "brand.sub":"UA Marketing",
+      "brand.sub":"UA &amp; Digital Performance",
       "nav.about":"About","nav.experience":"Experience","nav.markets":"Markets","nav.skills":"Skills","nav.education":"Education","nav.contact":"Contact","nav.portfolio":"Portfolio","nav.viewPortfolio":"Portfolio",
       "nav.download":"Download CV",
       "hero.eyebrow":"User Acquisition · Performance Marketing",
@@ -1024,7 +1034,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
     },
     vi: {
       "skip":"Bỏ qua điều hướng",
-      "brand.sub":"Thu hút người dùng",
+      "brand.sub":"UA &amp; Digital Performance",
       "nav.about":"Giới thiệu","nav.experience":"Kinh nghiệm","nav.markets":"Thị trường","nav.skills":"Kỹ năng","nav.education":"Học vấn","nav.contact":"Liên hệ","nav.portfolio":"Portfolio","nav.viewPortfolio":"Portfolio",
       "nav.download":"Tải CV",
       "hero.eyebrow":"Thu hút người dùng · Marketing hiệu suất",
@@ -1085,7 +1095,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
     },
     zh: {
       "skip":"跳到主要内容",
-      "brand.sub":"用户获取",
+      "brand.sub":"UA &amp; Digital Performance",
       "nav.about":"关于我","nav.experience":"工作经历","nav.markets":"投放市场","nav.skills":"技能","nav.education":"教育背景","nav.contact":"联系方式","nav.portfolio":"作品集","nav.viewPortfolio":"作品集",
       "nav.download":"下载简历",
       "hero.eyebrow":"用户获取 · 效果营销",
