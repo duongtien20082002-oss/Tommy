@@ -87,21 +87,23 @@ node tools/make-cv-pdfs.js
 
 (Cần Node.js, Google Chrome và gói `playwright-core` — có thể trỏ qua biến môi trường `NODE_PATH`.)
 
-## Đưa lên mạng (miễn phí)
+## Đưa lên mạng
 
-Site **đã được deploy tự động** lên Vercel:
+Site chạy trên VPS riêng (nginx + HTTPS Let's Encrypt). Vercel đã được gỡ.
 
 - Repo GitHub: `duongtien20082002-oss/Tommy` (nhánh `main`) — đây là bản gốc.
-- Vercel project: `tommy` → **https://tommy-dusky.vercel.app**
-- **Mỗi lần push lên `main`, Vercel tự build và cập nhật** (thường 20–60 giây). Chỉ cần F5 lại trang là thấy nội dung mới.
+- CV: **https://uadigitalperformance.tommysuper.io.vn** (thư mục `/var/www/uadigitalperformance` trên VPS).
+- Portfolio: **https://portfolio.tommysuper.io.vn** — repo riêng `duongtien20082002-oss/portfolio`, nằm trong thư mục `portfolio/`.
 
 Quy trình sửa nội dung:
 
 1. Sửa `index.html` (hoặc thay ảnh trong `assets/`).
 2. `git add -A`, `git commit -m "..."`, rồi `git push`.
-3. Đợi khoảng 30 giây, mở https://tommy-dusky.vercel.app và F5.
+3. Đưa bản mới lên VPS (push lên GitHub **không** tự cập nhật site):
 
-Muốn deploy thủ công ngay (không chờ Git): chạy `vercel --prod` trong thư mục này.
+```bash
+rsync -az --delete --exclude .git --exclude tools --exclude README.md --exclude .gitignore --exclude portfolio ./ vps:/var/www/uadigitalperformance/
+```
 
 Phương án dự phòng: GitHub Pages (Settings → Pages → branch `main`, thư mục `/ (root)`) hoặc Netlify Drop (https://app.netlify.com/drop).
 
