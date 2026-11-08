@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B231A"/>
+      <stop offset="1" stop-color="#040B08"/>
+    </linearGradient>
+    <radialGradient id="blobGreen" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#5EE3A1"/>
+      <stop offset=".55" stop-color="#2FAF72" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#2FAF72" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobBlue" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#5B8CFF"/>
+      <stop offset=".6" stop-color="#3A62D8" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#3A62D8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="blobMint" cx=".5" cy=".5" r=".5">
+      <stop offset="0" stop-color="#C9FFE6"/>
+      <stop offset="1" stop-color="#C9FFE6" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".22"/>
+      <stop offset=".5" stop-color="#FFFFFF" stop-opacity=".05"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".12"/>
+    </linearGradient>
+    <radialGradient id="spec" cx=".28" cy=".06" r=".62" gradientTransform="matrix(1 0 0 .55 0 0)">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".6"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rim" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/>
+      <stop offset=".35" stop-color="#FFFFFF" stop-opacity=".12"/>
+      <stop offset=".7" stop-color="#FFFFFF" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".7"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#E3FBEF"/>
+    </linearGradient>
+    <clipPath id="tile"><rect width="64" height="64" rx="16"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#tile)">
+    <!-- colourful backdrop the glass sits on -->
+    <rect width="64" height="64" fill="url(#bg)"/>
+    <circle cx="12" cy="14" r="30" fill="url(#blobGreen)"/>
+    <circle cx="58" cy="58" r="32" fill="url(#blobBlue)"/>
+    <circle cx="52" cy="10" r="15" fill="url(#blobMint)" opacity=".5"/>
+
+    <!-- glass layer: tint, soft specular, refraction glow along the bottom edge -->
+    <rect width="64" height="64" fill="url(#glass)"/>
+    <rect width="64" height="64" fill="url(#spec)"/>
+    <path d="M6 58c8 4 44 4 52 0" fill="none" stroke="#FFFFFF" stroke-opacity=".18" stroke-width="1.6" stroke-linecap="round"/>
+
+    <!-- monogram floating on the glass -->
+    <text x="32" y="43.5" text-anchor="middle" font-family="'SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="28" font-weight="800" letter-spacing="-1.2" fill="#03140C" opacity=".4" transform="translate(0 1.6)">DT</text>
+    <text x="32" y="43.5" text-anchor="middle" font-family="'SF Pro Display','Segoe UI','Helvetica Neue',Arial,sans-serif" font-size="28" font-weight="800" letter-spacing="-1.2" fill="url(#ink)">DT</text>
+  </g>
+
+  <!-- specular rim -->
+  <rect x=".8" y=".8" width="62.4" height="62.4" rx="15.2" fill="none" stroke="url(#rim)" stroke-width="1.6"/>
+</svg>
