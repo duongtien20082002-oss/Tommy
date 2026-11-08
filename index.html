@@ -304,31 +304,6 @@ section[id]{scroll-margin-top:calc(var(--nav-h) + 18px)}
 .bullets li::before{content:"";position:absolute;left:4px;top:9px;width:7px;height:7px;border-radius:2px;background:var(--accent);opacity:.85}
 .bullets li b{color:var(--text);font-weight:600}
 
-/* markets */
-.grid-4{display:grid;grid-template-columns:repeat(5,1fr);gap:18px}
-.market{padding:24px 22px}
-.market .mk-code{
-  width:46px;height:34px;border-radius:11px;display:grid;place-items:center;
-  font-family:var(--font-display);font-weight:700;font-size:14px;letter-spacing:.08em;
-  color:var(--accent);border:1px solid color-mix(in srgb,var(--accent) 32%,transparent);
-  background:linear-gradient(150deg,color-mix(in srgb,var(--accent) 20%,transparent),color-mix(in srgb,var(--accent) 5%,transparent));
-}
-.market h4{margin-top:14px;font-size:1.06rem;font-weight:700}
-.market p{margin-top:7px;font-size:13.6px;color:var(--muted)}
-.mk-note{
-  display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:13.4px;color:var(--text-2);
-  border:1px dashed var(--border);border-radius:10px;padding:8px 14px;
-}
-.mk-note svg{color:var(--accent);flex:none}
-.industry{margin-top:18px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.industry .card{display:flex;gap:16px;align-items:flex-start}
-.industry .ico{
-  width:44px;height:44px;flex:none;border-radius:12px;display:grid;place-items:center;
-  background:color-mix(in srgb,var(--accent) 13%,transparent);color:var(--accent);
-}
-.industry h4{font-size:1.02rem}
-.industry p{color:var(--muted);font-size:14px;margin-top:5px}
-
 /* skills */
 .grid-skills{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .skill-card h3{font-size:1.06rem;display:flex;align-items:center;gap:11px}
@@ -414,9 +389,6 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
 /* ============================================================
    7. RESPONSIVE
    ============================================================ */
-@media (max-width:1080px){
-  .grid-4{grid-template-columns:repeat(3,1fr)}
-}
 @media (max-width:1300px){
   .nav-links{
     position:fixed;top:var(--nav-h);left:0;right:0;flex-direction:column;gap:2px;margin:0;
@@ -437,14 +409,12 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
   .about-grid,.contact-grid{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(3,1fr);gap:22px 10px}
   .stat:nth-child(4)::before{display:none}
-  .grid-4{grid-template-columns:repeat(3,1fr)}
 }
 @media (max-width:680px){
   .wrap{padding-inline:18px}
   .section{padding:64px 0}
   .hero{padding-top:calc(var(--nav-h) + 34px)}
-  .grid-4{grid-template-columns:repeat(2,1fr)}
-  .grid-skills,.industry,.edu{grid-template-columns:1fr}
+  .grid-skills,.edu{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .stat:nth-child(3)::before,.stat:nth-child(5)::before{display:none}
   .timeline{padding-left:26px}
@@ -461,7 +431,6 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
   .chip-toggle button{padding:6px 8px;font-size:12px}
 }
 @media (max-width:520px){
-  .grid-4{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:480px){
@@ -504,7 +473,6 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
     <nav class="nav-links" id="navLinks" aria-label="Main">
       <a href="#about" data-i18n="nav.about">About</a>
       <a href="#experience" data-i18n="nav.experience">Experience</a>
-      <a href="#markets" data-i18n="nav.markets">Markets</a>
       <a href="#skills" data-i18n="nav.skills">Skills</a>
       <a href="#education" data-i18n="nav.education">Education</a>
       <a href="#contact" data-i18n="nav.contact">Contact</a>
@@ -559,7 +527,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
         </span>
         <span class="meta-pill">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17.5 9 11l4 4 8-8"/><path d="M21 7h-4.5M21 7v4.5"/></svg>
-          <span data-i18n="hero.channels">Meta · Google · TikTok Ads</span>
+          <span data-i18n="hero.channels">Meta · Google · Apple Search Ads</span>
         </span>
       </div>
     </div>
@@ -575,7 +543,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
       </div>
       <div class="float-card fc-2">
         <div class="k">3 <span data-i18n="fc.years">years</span></div>
-        <div class="v" data-i18n="fc.ua">UA Marketing</div>
+        <div class="v" data-i18n="fc.ua">UA &amp; Digital Performance</div>
       </div>
       <div class="float-card fc-3">
         <div class="k">5 <span data-i18n="fc.markets">markets</span></div>
@@ -648,11 +616,11 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
           </div>
           <div class="impact">
             <span data-i18n="j1.i1">USD 30,000–50,000 / month</span>
-            <span data-i18n="j1.i2">Meta · Google · TikTok · Apple Search Ads</span>
+            <span data-i18n="j1.i2">Meta · Google · Apple Search Ads</span>
             <span data-i18n="j1.i3">AppsFlyer · GA4 attribution</span>
           </div>
           <ul class="bullets" data-i18n-html="j1.bullets">
-            <li>Executed and optimized User Acquisition campaigns across <b>Meta Ads, Google Ads, TikTok Ads and Apple Search Ads</b>, managing monthly advertising budgets ranging from <b>USD 30,000 to USD 50,000</b>.</li>
+            <li>Executed and optimized User Acquisition campaigns across <b>Meta Ads, Google Ads and Apple Search Ads</b>, managing monthly advertising budgets ranging from <b>USD 30,000 to USD 50,000</b>.</li>
             <li>Collaborated with the Product and Creative teams to map the <b>customer journey</b>, identify <b>winning creatives</b> and scale high-performing campaigns.</li>
             <li>Built and iterated <b>campaign structures, audiences, bidding strategies</b> and creatives to validate acquisition channels ahead of launch.</li>
             <li>Tracked and optimized early-funnel metrics including <b>CPI, CPA, CTR, CPM, CVR, activation rate, retention</b> and user quality.</li>
@@ -755,58 +723,6 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
   </div>
 </section>
 
-<!-- ============================ MARKETS ============================ -->
-<section class="section" id="markets">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="section-tag" data-i18n="mk.tag">Markets</span>
-      <h2 data-i18n="mk.title">Where I've run campaigns</h2>
-      <p data-i18n="mk.sub">Multi-market campaigns with localized creative concepts and market-level performance insights.</p>
-      <span class="mk-note">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 2"/></svg>
-        <span data-i18n="mk.note">Slot games (2025–2026) · Agriculture (2024) · Beauty clinic (2024–2025) · Sports app (2026–Present)</span>
-      </span>
-    </div>
-    <div class="grid-4">
-      <div class="card market reveal" data-delay="1"><div class="mk-code" aria-hidden="true">EU</div><h4 data-i18n="mk.eu">Europe</h4><p data-i18n="mk.eu.d">Meta Ads for slot-game products, multi-country localization.</p></div>
-      <div class="card market reveal" data-delay="2"><div class="mk-code" aria-hidden="true">US</div><h4 data-i18n="mk.us">United States</h4><p data-i18n="mk.us.d">High-volume acquisition with strict CPA / ROAS targets.</p></div>
-      <div class="card market reveal" data-delay="3"><div class="mk-code" aria-hidden="true">IN</div><h4 data-i18n="mk.in">India</h4><p data-i18n="mk.in.d">Cost-efficient scaling with localized ad concepts.</p></div>
-      <div class="card market reveal" data-delay="4"><div class="mk-code" aria-hidden="true">BR</div><h4 data-i18n="mk.br">Brazil</h4><p data-i18n="mk.br.d">Creative-led testing for a fast-growing mobile market.</p></div>
-      <div class="card market reveal" data-delay="5"><div class="mk-code" aria-hidden="true">VN</div><h4 data-i18n="mk.vn">Vietnam</h4><p data-i18n="mk.vn.d">Agriculture and beauty services: Facebook Ads – Messages, budgets up to VND 80M per day.</p></div>
-    </div>
-    <div class="industry">
-      <div class="card reveal" data-delay="1">
-        <div class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="7" width="19" height="10" rx="5"/><path d="M7 12h3M8.5 10.5v3M16 11.5h.01M17.8 13h.01"/></svg></div>
-        <div>
-          <h4 data-i18n="ind.game">Gaming & Mobile Apps</h4>
-          <p data-i18n="ind.game.d">Slot-game products across Europe, the US, India and Brazil: CPI, CPA and ROAS optimization.</p>
-        </div>
-      </div>
-      <div class="card reveal" data-delay="2">
-        <div class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21c0-6 3.5-11 9-12-1 6.5-4.5 10.5-9 12Z"/><path d="M12 21C8 20 4 16 3 11c4 .5 7 2.5 9 6"/><path d="M12 21v-4"/></svg></div>
-        <div>
-          <h4 data-i18n="ind.agri">Agriculture &amp; E-commerce</h4>
-          <p data-i18n="ind.agri.d">Facebook Ads for biological crop-protection products, including landing pages, tracking setup and funnel analysis.</p>
-        </div>
-      </div>
-      <div class="card reveal" data-delay="3">
-        <div class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M11 3.6l1.7 5 5 1.7-5 1.7L11 17l-1.7-5-5-1.7 5-1.7z"/><path d="M18.4 15.6l.6 1.8 1.8.6-1.8.6-.6 1.8-.6-1.8-1.8-.6 1.8-.6z"/></svg></div>
-        <div>
-          <h4 data-i18n="ind.beauty">Beauty &amp; Aesthetics</h4>
-          <p data-i18n="ind.beauty.d">Facebook Ads – Messages for beauty services: scar treatment, laser hair removal, skin whitening and more.</p>
-        </div>
-      </div>
-      <div class="card reveal" data-delay="4">
-        <div class="ico" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m12 7.4 3.5 2.6-1.4 4.2h-4.2L8.5 10z"/><path d="M12 3.2v4.2M20.6 9.7l-5 .3M17.6 19.5l-3.2-3.2M6.4 19.5l3.2-3.2M3.4 9.7l5 .3"/></svg></div>
-        <div>
-          <h4 data-i18n="ind.sport">Sports App</h4>
-          <p data-i18n="ind.sport.d">Pre-launch acquisition for a football live-scores app: CPI, CPA, activation and retention.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============================ SKILLS ============================ -->
 <section class="section" id="skills">
   <div class="wrap">
@@ -818,7 +734,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
     <div class="grid-skills">
       <div class="card skill-card reveal" data-delay="1">
         <h3><span class="ico" aria-hidden="true"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17.5 9 11l4 4 8-8"/><path d="M21 7h-4.5M21 7v4.5"/></svg></span><span data-i18n="sk.g1">UA Marketing</span></h3>
-        <p class="sk-desc" data-i18n="sk.g1.d">Running and optimizing acquisition campaigns across Meta, Google and TikTok Ads.</p>
+        <p class="sk-desc" data-i18n="sk.g1.d">Running and optimizing acquisition campaigns across Meta, Google and Apple Search Ads.</p>
         <div class="tags">
           <span class="tag">Facebook Ads</span>
           <span class="tag">Meta Business Manager</span>
@@ -961,7 +877,7 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
   "telephone": "+84972965607",
   "address": { "@type": "PostalAddress", "addressLocality": "Binh Thanh", "addressRegion": "Ho Chi Minh City", "addressCountry": "VN" },
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "Greenwich Vietnam" },
-  "knowsAbout": ["User Acquisition","Performance Marketing","Facebook Ads","Meta Ads","Google Ads","TikTok Ads","A/B Testing","ROAS Optimization","CPA Optimization","AppsFlyer","Google Analytics 4"]
+  "knowsAbout": ["User Acquisition","Performance Marketing","Facebook Ads","Meta Ads","Google Ads","Apple Search Ads","A/B Testing","ROAS Optimization","CPA Optimization","AppsFlyer","Google Analytics 4"]
 }
 </script>
 
@@ -974,14 +890,14 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
     en: {
       "skip":"Skip to content",
       "brand.sub":"UA &amp; Digital Performance",
-      "nav.about":"About","nav.experience":"Experience","nav.markets":"Markets","nav.skills":"Skills","nav.education":"Education","nav.contact":"Contact","nav.portfolio":"Portfolio","nav.viewPortfolio":"Portfolio",
+      "nav.about":"About","nav.experience":"Experience","nav.skills":"Skills","nav.education":"Education","nav.contact":"Contact","nav.portfolio":"Portfolio","nav.viewPortfolio":"Portfolio",
       "nav.download":"Download CV",
       "hero.eyebrow":"User Acquisition · Performance Marketing",
       "hero.role":"UA Marketer — Performance Marketing &amp; User Acquisition",
       "hero.lead":"Nearly <b>3 years</b> in Performance Marketing and User Acquisition across <b>Gaming</b>, <b>Agriculture</b>, <b>Beauty</b> and <b>Sports</b>, running campaigns in <b>Europe, the United States, India and Brazil</b>. I scale acquisition with structured creative testing, clean tracking and data-driven optimization.",
       "hero.email":"Email me","hero.viewWork":"View my work",
-      "hero.loc":"Binh Thanh, Ho Chi Minh City","hero.channels":"Meta · Google · TikTok Ads",
-      "fc.budget":"Monthly ad budget","fc.years":"years","fc.ua":"UA Marketing","fc.markets":"markets","fc.regions":"VN · EU · US · IN · BR",
+      "hero.loc":"Binh Thanh, Ho Chi Minh City","hero.channels":"Meta · Google · Apple Search Ads",
+      "fc.budget":"Monthly ad budget","fc.years":"years","fc.ua":"UA &amp; Digital Performance","fc.markets":"markets","fc.regions":"VN · EU · US · IN · BR",
       "stat.years":"Years in performance marketing","stat.budget":"Peak monthly ad budget","stat.daily":"Daily ad spend managed",
       "stat.revenue":"Peak monthly revenue supported","stat.creatives":"Video creatives per week","stat.markets":"Markets across 3 continents",
       "about.tag":"Career Objective",
@@ -994,8 +910,8 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
       "exp.tag":"Work Experience","exp.title":"Nearly 3 years of hands-on User Acquisition",
       "exp.sub":"Four roles across four industries — agriculture, beauty clinic, gaming and sports apps — spanning five markets: Vietnam, Europe, the US, India and Brazil.",
       "j1.role":"User Acquisition","j1.period":"05/2026 — Present","j1.note":"(Pre-launch)",
-      "j1.i1":"USD 30,000–50,000 / month","j1.i2":"Meta · Google · TikTok · Apple Search Ads","j1.i3":"AppsFlyer · GA4 attribution",
-      "j1.bullets":"<li>Executed and optimized User Acquisition campaigns across <b>Meta Ads, Google Ads, TikTok Ads and Apple Search Ads</b>, managing monthly advertising budgets ranging from <b>USD 30,000 to USD 50,000</b>.</li><li>Collaborated with the Product and Creative teams to map the <b>customer journey</b>, identify <b>winning creatives</b> and scale high-performing campaigns.</li><li>Built and iterated <b>campaign structures, audiences, bidding strategies</b> and creatives to validate acquisition channels ahead of launch.</li><li>Tracked and optimized early-funnel metrics including <b>CPI, CPA, CTR, CPM, CVR, activation rate, retention</b> and user quality.</li><li>Worked with Product and Development teams to improve <b>onboarding and conversion flows</b> using campaign and in-app behavior insights.</li><li>Used <b>AppsFlyer, GA4</b> and attribution data to monitor acquisition performance and inform scaling decisions.</li>",
+      "j1.i1":"USD 30,000–50,000 / month","j1.i2":"Meta · Google · Apple Search Ads","j1.i3":"AppsFlyer · GA4 attribution",
+      "j1.bullets":"<li>Executed and optimized User Acquisition campaigns across <b>Meta Ads, Google Ads and Apple Search Ads</b>, managing monthly advertising budgets ranging from <b>USD 30,000 to USD 50,000</b>.</li><li>Collaborated with the Product and Creative teams to map the <b>customer journey</b>, identify <b>winning creatives</b> and scale high-performing campaigns.</li><li>Built and iterated <b>campaign structures, audiences, bidding strategies</b> and creatives to validate acquisition channels ahead of launch.</li><li>Tracked and optimized early-funnel metrics including <b>CPI, CPA, CTR, CPM, CVR, activation rate, retention</b> and user quality.</li><li>Worked with Product and Development teams to improve <b>onboarding and conversion flows</b> using campaign and in-app behavior insights.</li><li>Used <b>AppsFlyer, GA4</b> and attribution data to monitor acquisition performance and inform scaling decisions.</li>",
       "j2.role":"Meta Ads Specialist",
       "j2.period":"07/2025 — 05/2026",
       "j2.i1":"USD 6,000 / day spend","j2.i4":"USD 100,000–150,000 / month","j2.i2":"Europe · US · India · Brazil","j2.i3":"20–30 video creatives / week",
@@ -1006,21 +922,21 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
       "j3.role":"Meta Ads Specialist",
       "j3.i1":"VND 20M / day budget","j3.i2":"VND 1.2B peak monthly revenue","j3.i3":"Meta Business Manager setup",
       "j3.bullets":"<li>Planned and executed <b>Facebook Ads campaigns</b> for agricultural and biological crop-protection products.</li><li>Managed daily advertising budgets of up to <b>VND 20 million</b> and supported peak monthly revenue of <b>VND 1.2 billion</b>.</li><li>Optimized <b>CPM, CPC, CPA and ROAS</b> through structured A/B testing of audiences, creatives, offers and landing pages.</li><li>Built and managed <b>Meta Business Manager</b>, ad accounts, tracking setup and landing pages to support campaign operations.</li><li>Produced and coordinated <b>video ads, voice-overs and multi-format creative assets</b> for ongoing testing and scaling.</li><li>Analyzed <b>funnel performance</b> to identify conversion bottlenecks and improve campaign efficiency.</li>",
-      "mk.tag":"Markets","mk.title":"Where I've run campaigns",
-      "mk.sub":"Multi-market campaigns with localized creative concepts and market-level performance insights.",
-      "mk.note":"Slot games (2025–2026) · Agriculture (2024) · Beauty clinic (2024–2025) · Sports app (2026–Present)",
-      "mk.eu":"Europe","mk.eu.d":"Meta Ads for slot-game products, multi-country localization.",
-      "mk.us":"United States","mk.us.d":"High-volume acquisition with strict CPA / ROAS targets.",
-      "mk.in":"India","mk.in.d":"Cost-efficient scaling with localized ad concepts.",
-      "mk.br":"Brazil","mk.br.d":"Creative-led testing for a fast-growing mobile market.",
-      "mk.vn":"Vietnam","mk.vn.d":"Agriculture and beauty services: Facebook Ads – Messages, budgets up to VND 80M per day.",
-      "ind.game":"Gaming &amp; Mobile Apps","ind.game.d":"Slot-game products across Europe, the US, India and Brazil: CPI, CPA and ROAS optimization.",
-      "ind.agri":"Agriculture &amp; E-commerce","ind.agri.d":"Facebook Ads for biological crop-protection products, including landing pages, tracking setup and funnel analysis.",
-      "ind.beauty":"Beauty &amp; Aesthetics","ind.beauty.d":"Facebook Ads – Messages for beauty services: scar treatment, laser hair removal, skin whitening and more.",
-      "ind.sport":"Sports App","ind.sport.d":"Pre-launch acquisition for a football live-scores app: CPI, CPA, activation and retention.",
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       "sk.tag":"Skills","sk.title":"Toolbox","sk.sub":"The stack I use daily to launch, measure and scale acquisition campaigns.",
       "sk.g1":"UA Marketing","sk.g2":"Analytics &amp; Tracking","sk.g3":"Creative Production","sk.g4":"Soft Skills",
-      "sk.g1.d":"Running and optimizing acquisition campaigns across Meta, Google and TikTok Ads.","sk.g2.d":"Setting up tracking and reading the data to decide what to scale and what to cut.",
+      "sk.g1.d":"Running and optimizing acquisition campaigns across Meta, Google and Apple Search Ads.","sk.g2.d":"Setting up tracking and reading the data to decide what to scale and what to cut.",
       "sk.g3.d":"Producing and coordinating multi-format creative, fast enough for continuous testing.","sk.g4.d":"Working across teams and markets, with large budgets and multiple campaigns at once.",
       "sk.t.structure":"Campaign Structure","sk.t.audience":"Audience Research","sk.t.creative":"Creative Testing","sk.t.funnel":"Funnel Optimization",
       "sk.t.copy":"Ad Copywriting","sk.t.brief":"UGC Creative Brief","sk.t.team":"Cross-functional Collaboration","sk.t.time":"Time Management &amp; Deadlines","sk.t.problem":"Problem Solving","sk.t.comm":"Communication &amp; Reporting","sk.t.localize":"Creative Localization","sk.t.data":"Data-driven Decisions","sk.t.multi":"Managing Multiple Campaigns",
@@ -1035,14 +951,14 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
     vi: {
       "skip":"Bỏ qua điều hướng",
       "brand.sub":"UA &amp; Digital Performance",
-      "nav.about":"Giới thiệu","nav.experience":"Kinh nghiệm","nav.markets":"Thị trường","nav.skills":"Kỹ năng","nav.education":"Học vấn","nav.contact":"Liên hệ","nav.portfolio":"Portfolio","nav.viewPortfolio":"Portfolio",
+      "nav.about":"Giới thiệu","nav.experience":"Kinh nghiệm","nav.skills":"Kỹ năng","nav.education":"Học vấn","nav.contact":"Liên hệ","nav.portfolio":"Portfolio","nav.viewPortfolio":"Portfolio",
       "nav.download":"Tải CV",
       "hero.eyebrow":"Thu hút người dùng · Marketing hiệu suất",
       "hero.role":"Chuyên viên Marketing hiệu suất &amp; Thu hút người dùng",
       "hero.lead":"Gần <b>3 năm</b> làm Marketing hiệu suất và Thu hút người dùng trong các lĩnh vực <b>Gaming</b>, <b>Nông nghiệp</b>, <b>Thẩm mỹ</b> và <b>Thể thao</b>, trực tiếp chạy chiến dịch tại <b>châu Âu, Mỹ, Ấn Độ và Brazil</b>. Tôi mở rộng tệp người dùng bằng cách test creative có hệ thống, tracking chuẩn và tối ưu dựa trên dữ liệu.",
       "hero.email":"Gửi email","hero.viewWork":"Xem kinh nghiệm",
-      "hero.loc":"Bình Thạnh, TP. Hồ Chí Minh","hero.channels":"Meta · Google · TikTok Ads",
-      "fc.budget":"Ngân sách quảng cáo / tháng","fc.years":"năm","fc.ua":"Thu hút người dùng","fc.markets":"thị trường","fc.regions":"VN · EU · US · IN · BR",
+      "hero.loc":"Bình Thạnh, TP. Hồ Chí Minh","hero.channels":"Meta · Google · Apple Search Ads",
+      "fc.budget":"Ngân sách quảng cáo / tháng","fc.years":"năm","fc.ua":"UA &amp; Digital Performance","fc.markets":"thị trường","fc.regions":"VN · EU · US · IN · BR",
       "stat.years":"Năm làm Performance Marketing","stat.budget":"Ngân sách quảng cáo/tháng cao nhất","stat.daily":"Chi tiêu quảng cáo/ngày đã quản lý",
       "stat.revenue":"Doanh thu/tháng cao nhất đã hỗ trợ","stat.creatives":"Video creative mỗi tuần","stat.markets":"Thị trường trên 3 châu lục",
       "about.tag":"Mục tiêu nghề nghiệp",
@@ -1055,8 +971,8 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
       "exp.tag":"Kinh nghiệm làm việc","exp.title":"Gần 3 năm thực chiến trong mảng thu hút người dùng",
       "exp.sub":"4 vị trí ở 4 lĩnh vực — nông nghiệp, thẩm mỹ, gaming và app thể thao — trải qua 5 thị trường: Việt Nam, châu Âu, Mỹ, Ấn Độ và Brazil.",
       "j1.role":"Chuyên viên thu hút người dùng","j1.period":"05/2026 — Hiện tại","j1.note":"(Giai đoạn trước khi ra mắt)",
-      "j1.i1":"30.000–50.000 USD / tháng","j1.i2":"Meta · Google · TikTok · Apple Search Ads","j1.i3":"Đo lường attribution: AppsFlyer · GA4",
-      "j1.bullets":"<li>Triển khai và tối ưu chiến dịch thu hút người dùng trên <b>Meta Ads, Google Ads, TikTok Ads và Apple Search Ads</b>, quản lý ngân sách quảng cáo hằng tháng từ <b>30.000 đến 50.000 USD</b>.</li><li>Phối hợp với đội ngũ Product và Creative để vẽ <b>hành trình khách hàng</b>, xác định <b>creative hiệu quả nhất</b> và mở rộng các chiến dịch thắng.</li><li>Xây dựng và liên tục điều chỉnh <b>cấu trúc chiến dịch, nhóm đối tượng, chiến lược giá thầu</b> và creative để kiểm chứng các kênh thu hút người dùng trước khi ra mắt.</li><li>Theo dõi và tối ưu nhóm chỉ số đầu phễu: <b>CPI, CPA, CTR, CPM, CVR</b>, tỷ lệ kích hoạt, tỷ lệ giữ chân người dùng và chất lượng người dùng.</li><li>Làm việc cùng đội ngũ Product và Development để cải thiện <b>luồng onboarding và chuyển đổi</b> dựa trên insight từ chiến dịch và hành vi trong app.</li><li>Sử dụng <b>AppsFlyer, GA4</b> và dữ liệu attribution để theo dõi hiệu quả thu hút người dùng và ra quyết định mở rộng quy mô.</li>",
+      "j1.i1":"30.000–50.000 USD / tháng","j1.i2":"Meta · Google · Apple Search Ads","j1.i3":"Đo lường attribution: AppsFlyer · GA4",
+      "j1.bullets":"<li>Triển khai và tối ưu chiến dịch thu hút người dùng trên <b>Meta Ads, Google Ads và Apple Search Ads</b>, quản lý ngân sách quảng cáo hằng tháng từ <b>30.000 đến 50.000 USD</b>.</li><li>Phối hợp với đội ngũ Product và Creative để vẽ <b>hành trình khách hàng</b>, xác định <b>creative hiệu quả nhất</b> và mở rộng các chiến dịch thắng.</li><li>Xây dựng và liên tục điều chỉnh <b>cấu trúc chiến dịch, nhóm đối tượng, chiến lược giá thầu</b> và creative để kiểm chứng các kênh thu hút người dùng trước khi ra mắt.</li><li>Theo dõi và tối ưu nhóm chỉ số đầu phễu: <b>CPI, CPA, CTR, CPM, CVR</b>, tỷ lệ kích hoạt, tỷ lệ giữ chân người dùng và chất lượng người dùng.</li><li>Làm việc cùng đội ngũ Product và Development để cải thiện <b>luồng onboarding và chuyển đổi</b> dựa trên insight từ chiến dịch và hành vi trong app.</li><li>Sử dụng <b>AppsFlyer, GA4</b> và dữ liệu attribution để theo dõi hiệu quả thu hút người dùng và ra quyết định mở rộng quy mô.</li>",
       "j2.role":"Chuyên viên Meta Ads",
       "j2.period":"07/2025 — 05/2026",
       "j2.i1":"6.000 USD / ngày","j2.i4":"100.000–150.000 USD / tháng","j2.i2":"Châu Âu · Mỹ · Ấn Độ · Brazil","j2.i3":"20–30 video creative / tuần",
@@ -1067,21 +983,21 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
       "j3.role":"Chuyên viên Meta Ads",
       "j3.i1":"Ngân sách 20 triệu VND / ngày","j3.i2":"Doanh thu tháng cao nhất 1,2 tỷ VND","j3.i3":"Thiết lập Trình quản lý doanh nghiệp Meta",
       "j3.bullets":"<li>Lên kế hoạch và triển khai <b>chiến dịch Facebook Ads</b> cho sản phẩm bảo vệ thực vật sinh học.</li><li>Quản lý ngân sách quảng cáo hằng ngày lên tới <b>20 triệu VND</b> và hỗ trợ doanh thu tháng cao nhất <b>1,2 tỷ VND</b>.</li><li>Tối ưu <b>CPM, CPC, CPA và ROAS</b> bằng A/B testing có cấu trúc trên nhóm đối tượng, creative, ưu đãi và landing page.</li><li>Xây dựng và quản lý <b>Trình quản lý doanh nghiệp Meta</b> (Business Manager), tài khoản quảng cáo, thiết lập tracking và landing page để vận hành chiến dịch.</li><li>Sản xuất và điều phối <b>video quảng cáo, lồng tiếng và creative đa định dạng</b> phục vụ test và mở rộng quy mô liên tục.</li><li>Phân tích <b>hiệu quả phễu chuyển đổi</b> để tìm điểm nghẽn và cải thiện hiệu suất chiến dịch.</li>",
-      "mk.tag":"Thị trường","mk.title":"Những thị trường tôi đã chạy chiến dịch",
-      "mk.sub":"Chiến dịch đa thị trường với concept quảng cáo được bản địa hóa và insight hiệu quả theo từng khu vực.",
-      "mk.note":"Game slot (2025–2026) · Nông nghiệp (2024) · Thẩm mỹ (2024–2025) · Thể thao (2026–nay)",
-      "mk.eu":"Châu Âu","mk.eu.d":"Meta Ads cho sản phẩm game slot, bản địa hóa cho nhiều quốc gia.",
-      "mk.us":"Hoa Kỳ","mk.us.d":"Quy mô người dùng lớn với chỉ tiêu CPA / ROAS nghiêm ngặt.",
-      "mk.in":"Ấn Độ","mk.in.d":"Mở rộng quy mô với chi phí tối ưu nhờ concept quảng cáo bản địa hóa.",
-      "mk.br":"Brazil","mk.br.d":"Test creative cho thị trường mobile tăng trưởng nhanh.",
-      "mk.vn":"Việt Nam","mk.vn.d":"Nông nghiệp và dịch vụ thẩm mỹ: Facebook Ads – Messages, ngân sách tới 80 triệu VND/ngày.",
-      "ind.game":"Gaming &amp; Mobile App","ind.game.d":"Sản phẩm game slot tại châu Âu, Mỹ, Ấn Độ và Brazil: tối ưu CPI, CPA và ROAS.",
-      "ind.agri":"Nông nghiệp &amp; E-commerce","ind.agri.d":"Facebook Ads cho sản phẩm bảo vệ thực vật sinh học, gồm landing page, thiết lập tracking và phân tích phễu chuyển đổi.",
-      "ind.beauty":"Thẩm mỹ","ind.beauty.d":"Facebook Ads – Messages cho dịch vụ thẩm mỹ: trị sẹo rỗ, trị thâm, triệt lông, tắm trắng,…",
-      "ind.sport":"Thể thao","ind.sport.d":"Acquisition giai đoạn trước khi ra mắt cho app tỷ số bóng đá: tối ưu CPI, CPA, tỷ lệ kích hoạt và tỷ lệ giữ chân.",
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       "sk.tag":"Kỹ năng","sk.title":"Bộ công cụ","sk.sub":"Những công cụ tôi dùng hằng ngày để chạy, đo lường và mở rộng quy mô chiến dịch.",
       "sk.g1":"Thu hút người dùng","sk.g2":"Phân tích &amp; Đo lường","sk.g3":"Sản xuất creative","sk.g4":"Kỹ năng mềm",
-      "sk.g1.d":"Chạy và tối ưu chiến dịch thu hút người dùng trên Meta, Google và TikTok Ads.","sk.g2.d":"Thiết lập tracking và đọc số liệu để quyết định mở rộng hay dừng nhóm quảng cáo.",
+      "sk.g1.d":"Chạy và tối ưu chiến dịch thu hút người dùng trên Meta, Google và Apple Search Ads.","sk.g2.d":"Thiết lập tracking và đọc số liệu để quyết định mở rộng hay dừng nhóm quảng cáo.",
       "sk.g3.d":"Tự sản xuất và điều phối creative đa định dạng, đủ nhanh cho việc test liên tục.","sk.g4.d":"Phối hợp giữa các phòng ban, làm việc với ngân sách lớn và nhiều chiến dịch song song.",
       "sk.t.structure":"Cấu trúc chiến dịch","sk.t.audience":"Nghiên cứu đối tượng","sk.t.creative":"Test creative","sk.t.funnel":"Tối ưu phễu chuyển đổi",
       "sk.t.copy":"Viết nội dung quảng cáo","sk.t.brief":"Viết brief creative UGC","sk.t.team":"Phối hợp đa phòng ban","sk.t.time":"Quản lý thời gian &amp; deadline","sk.t.problem":"Giải quyết vấn đề","sk.t.comm":"Giao tiếp &amp; báo cáo","sk.t.localize":"Bản địa hóa creative theo thị trường","sk.t.data":"Ra quyết định dựa trên dữ liệu","sk.t.multi":"Quản lý nhiều chiến dịch song song",
@@ -1096,14 +1012,14 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
     zh: {
       "skip":"跳到主要内容",
       "brand.sub":"UA &amp; Digital Performance",
-      "nav.about":"关于我","nav.experience":"工作经历","nav.markets":"投放市场","nav.skills":"技能","nav.education":"教育背景","nav.contact":"联系方式","nav.portfolio":"作品集","nav.viewPortfolio":"作品集",
+      "nav.about":"关于我","nav.experience":"工作经历","nav.skills":"技能","nav.education":"教育背景","nav.contact":"联系方式","nav.portfolio":"作品集","nav.viewPortfolio":"作品集",
       "nav.download":"下载简历",
       "hero.eyebrow":"用户获取 · 效果营销",
       "hero.role":"UA 营销 — 效果营销与用户获取",
       "hero.lead":"拥有近 <b>3 年</b>效果营销与用户获取经验，覆盖 <b>游戏</b>、<b>农业</b>、<b>医美</b> 与 <b>体育</b> 行业，并在 <b>欧洲、美国、印度和巴西</b> 投放广告。我通过系统化的素材测试、规范的归因追踪与数据驱动优化来扩大用户规模。",
       "hero.email":"给我发邮件","hero.viewWork":"查看我的经历",
-      "hero.loc":"胡志明市平盛区","hero.channels":"Meta · Google · TikTok Ads",
-      "fc.budget":"每月广告预算","fc.years":"年","fc.ua":"用户获取","fc.markets":"个市场","fc.regions":"VN · EU · US · IN · BR",
+      "hero.loc":"胡志明市平盛区","hero.channels":"Meta · Google · Apple Search Ads",
+      "fc.budget":"每月广告预算","fc.years":"年","fc.ua":"UA &amp; Digital Performance","fc.markets":"个市场","fc.regions":"VN · EU · US · IN · BR",
       "stat.years":"效果营销年限","stat.budget":"单月最高广告预算","stat.daily":"日均管理的广告支出",
       "stat.revenue":"单月最高支持营收","stat.creatives":"每周视频素材数量","stat.markets":"横跨三大洲的市场",
       "about.tag":"职业目标",
@@ -1116,8 +1032,8 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
       "exp.tag":"工作经历","exp.title":"近 3 年一线用户获取实战经验",
       "exp.sub":"4 个职位、4 个行业——农业、医美诊所、游戏与体育 App——覆盖 5 个市场：越南、欧洲、美国、印度和巴西。",
       "j1.role":"UA 营销","j1.period":"2026/05 — 至今","j1.note":"（上线前阶段）",
-      "j1.i1":"每月 30,000–50,000 美元","j1.i2":"Meta · Google · TikTok · Apple Search Ads","j1.i3":"AppsFlyer · GA4 归因",
-      "j1.bullets":"<li>在 <b>Meta Ads、Google Ads、TikTok Ads 与 Apple Search Ads</b> 上执行并优化用户获取广告，管理每月 <b>30,000 至 50,000 美元</b>的广告预算。</li><li>与产品及创意团队协作梳理 <b>用户旅程</b>，找出 <b>高效果素材</b>，并放大表现优异的广告。</li><li>搭建并持续迭代 <b>广告结构、受众、出价策略</b> 与素材，在上线前验证各获客渠道。</li><li>跟踪并优化漏斗前端指标，包括 <b>CPI、CPA、CTR、CPM、CVR</b>、激活率、留存率与用户质量。</li><li>与产品和开发团队合作，基于广告投放与应用内行为洞察，改进 <b>新手引导与转化流程</b>。</li><li>使用 <b>AppsFlyer、GA4</b> 与归因数据监控获客表现，为扩量决策提供依据。</li>",
+      "j1.i1":"每月 30,000–50,000 美元","j1.i2":"Meta · Google · Apple Search Ads","j1.i3":"AppsFlyer · GA4 归因",
+      "j1.bullets":"<li>在 <b>Meta Ads、Google Ads 与 Apple Search Ads</b> 上执行并优化用户获取广告，管理每月 <b>30,000 至 50,000 美元</b>的广告预算。</li><li>与产品及创意团队协作梳理 <b>用户旅程</b>，找出 <b>高效果素材</b>，并放大表现优异的广告。</li><li>搭建并持续迭代 <b>广告结构、受众、出价策略</b> 与素材，在上线前验证各获客渠道。</li><li>跟踪并优化漏斗前端指标，包括 <b>CPI、CPA、CTR、CPM、CVR</b>、激活率、留存率与用户质量。</li><li>与产品和开发团队合作，基于广告投放与应用内行为洞察，改进 <b>新手引导与转化流程</b>。</li><li>使用 <b>AppsFlyer、GA4</b> 与归因数据监控获客表现，为扩量决策提供依据。</li>",
       "j2.role":"Meta 广告优化师",
       "j2.period":"2025/07 — 2026/05",
       "j2.i1":"每日 6,000 美元投放","j2.i4":"每月 100,000–150,000 美元","j2.i2":"欧洲 · 美国 · 印度 · 巴西","j2.i3":"每周 20–30 条视频素材",
@@ -1128,21 +1044,21 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
       "j3.role":"Meta 广告优化师",
       "j3.i1":"每日 2,000 万越南盾预算","j3.i2":"单月最高营收 12 亿越南盾","j3.i3":"Meta Business Manager 搭建",
       "j3.bullets":"<li>为生物植物保护产品策划并执行 <b>Facebook Ads 广告</b>。</li><li>管理每日最高 <b>2,000 万越南盾</b>的广告预算，并支撑单月最高 <b>12 亿越南盾</b>的营收。</li><li>通过对受众、素材、优惠与落地页的结构化 A/B 测试，优化 <b>CPM、CPC、CPA 与 ROAS</b>。</li><li>搭建并管理 <b>Meta Business Manager</b>、广告账户、追踪设置与落地页，支撑广告投放运营。</li><li>制作并协调 <b>视频广告、配音与多格式素材</b>，持续用于测试与扩量。</li><li>分析 <b>漏斗表现</b>，找出转化瓶颈并提升广告效率。</li>",
-      "mk.tag":"投放市场","mk.title":"我投放过的市场",
-      "mk.sub":"多市场广告投放，结合本地化创意概念与各市场的效果洞察。",
-      "mk.note":"老虎机游戏（2025–2026）· 农业（2024）· 医美诊所（2024–2025）· 体育 App（2026–至今）",
-      "mk.eu":"欧洲","mk.eu.d":"为老虎机游戏产品投放 Meta Ads，多国本地化。",
-      "mk.us":"美国","mk.us.d":"在严格的 CPA / ROAS 目标下进行大规模获客。",
-      "mk.in":"印度","mk.in.d":"借助本地化广告创意实现低成本扩量。",
-      "mk.br":"巴西","mk.br.d":"针对高速增长的移动市场进行素材驱动的测试。",
-      "mk.vn":"越南","mk.vn.d":"农业与医美服务：Facebook Ads – Messages，预算最高每日 8,000 万越南盾。",
-      "ind.game":"游戏 &amp; 移动应用","ind.game.d":"在欧洲、美国、印度和巴西投放老虎机游戏产品：优化 CPI、CPA 与 ROAS。",
-      "ind.agri":"农业 &amp; 电商","ind.agri.d":"为生物植物保护产品投放 Facebook Ads，包括落地页、追踪搭建与漏斗分析。",
-      "ind.beauty":"医美 &amp; 美容","ind.beauty.d":"为医美服务投放 Facebook Ads – Messages：痘坑修复、淡斑、激光脱毛、美白等。",
-      "ind.sport":"体育 App","ind.sport.d":"为足球比分 App 做上线前获客：优化 CPI、CPA、激活率与留存率。",
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       "sk.tag":"技能","sk.title":"技能工具箱","sk.sub":"我每天用来投放、衡量并扩大广告的工具与方法。",
       "sk.g1":"用户获取","sk.g2":"数据分析 &amp; 追踪","sk.g3":"素材制作","sk.g4":"软技能",
-      "sk.g1.d":"在 Meta、Google 和 TikTok Ads 上投放并优化获客广告。","sk.g2.d":"搭建追踪体系并解读数据，决定哪些广告组该放大、哪些该关停。",
+      "sk.g1.d":"在 Meta、Google 和 Apple Search Ads 上投放并优化获客广告。","sk.g2.d":"搭建追踪体系并解读数据，决定哪些广告组该放大、哪些该关停。",
       "sk.g3.d":"自主制作并协调多格式素材，速度足以支撑持续测试。","sk.g4.d":"跨部门与跨市场协作，同时管理大预算与多个广告项目。",
       "sk.t.structure":"广告结构搭建","sk.t.audience":"受众研究","sk.t.creative":"素材测试","sk.t.funnel":"漏斗优化",
       "sk.t.copy":"广告文案撰写","sk.t.brief":"UGC 素材简报","sk.t.team":"跨部门协作","sk.t.time":"时间与截止日期管理","sk.t.problem":"问题解决","sk.t.comm":"沟通与汇报","sk.t.localize":"素材本地化","sk.t.data":"数据驱动决策","sk.t.multi":"多项目并行管理",
