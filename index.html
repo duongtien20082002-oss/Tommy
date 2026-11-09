@@ -451,6 +451,10 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
   .pdf-only{display:inline-flex}
   /* Blurred shadows export to PDF as a flat block (black/grey/green square) in macOS viewers */
   .btn-primary,.btn-portfolio,.portrait,.co-logo{box-shadow:none!important}
+  /* Page breaks: keep job headers, section headings and cards in one piece */
+  .job-top,.impact,.section-head,.skill-card,.edu,.contact-card,.info-row,.bullets li{break-inside:avoid}
+  .job-top,.impact,.section-head,.section-tag,.section-head h2,.section-head p{break-after:avoid}
+  footer{margin-top:0;padding:14px 0;break-before:avoid}
   .nav,.progress,.totop,.toast,.portrait-glow,.float-card{display:none!important}
   body{background:#fff;color:#000}
   .card,.contact-card{border:1px solid #ccc;box-shadow:none}
