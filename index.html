@@ -449,7 +449,8 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
 .pdf-only{display:none}
 @media print{
   .pdf-only{display:inline-flex}
-  .btn-portfolio.pdf-only{box-shadow:none}
+  /* Blurred shadows export to PDF as a flat block (black/grey/green square) in macOS viewers */
+  .btn-primary,.btn-portfolio,.portrait,.co-logo{box-shadow:none!important}
   .nav,.progress,.totop,.toast,.portrait-glow,.float-card{display:none!important}
   body{background:#fff;color:#000}
   .card,.contact-card{border:1px solid #ccc;box-shadow:none}
