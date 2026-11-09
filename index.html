@@ -446,7 +446,10 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
   html{scroll-behavior:auto}
   .reveal{opacity:1;transform:none}
 }
+.pdf-only{display:none}
 @media print{
+  .pdf-only{display:inline-flex}
+  .btn-portfolio.pdf-only{box-shadow:none}
   .nav,.progress,.totop,.toast,.portrait-glow,.float-card{display:none!important}
   body{background:#fff;color:#000}
   .card,.contact-card{border:1px solid #ccc;box-shadow:none}
@@ -518,6 +521,10 @@ footer{border-top:1px solid var(--border-soft);padding:30px 0;margin-top:20px}
         <a class="btn btn-ghost" href="#experience">
           <span data-i18n="hero.viewWork">View my work</span>
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m0 0-5.5-5.5M19 12l-5.5 5.5"/></svg>
+        </a>
+        <a class="btn btn-portfolio pdf-only" href="https://portfolio.tommysuper.io.vn/">
+          <span class="pulse" aria-hidden="true"></span>
+          <span data-i18n="nav.viewPortfolio">Portfolio</span>
         </a>
       </div>
       <div class="hero-meta">
